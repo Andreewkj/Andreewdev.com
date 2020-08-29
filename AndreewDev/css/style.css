@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 100px;
+    width: 100%;
+}
+.banner-inicio{
+    display: flex; /*para mover as coisas separadas*/
+    min-height: 100vh;
+    background-color: #111111;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-inicio h2.titulo{
+    margin-bottom: -30px;
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 300;
+}
+.banner-inicio p{
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 30px;
+}
+.banner-inicio span{
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 35px;
+}
+.textoCx.right {
+    float: right;
+    width: 50%;
+  
+}
+.textoCx.right .box-sobre{
+    width: 542px;
+    height: 257px;
+    padding: 60px;
+    background: #f4f4f4;
+    border-radius: 15px;
+}
+.textoCx.right .tx-sobre p{
+    color: #111111;
+    font-size: 22px;
+    font-weight: 500;
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 200px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header.rolou
+{
+    background: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+header.rolou ul li a,
+header.rolou h1 a{
+    color: #111;
+}
+header.rolou ul li a:hover,
+header.rolou h1 a:hover{
+    color: #111;
+}
+header ul /*pra mandar para os lados*/
+{
+    position: relative;
+    display: flex;
+}
+header h1 a {
+    text-decoration: none;
+    color: #f4f4f4;
+    margin-left: -50px;
+}
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+header ul li a
+{
+    position: relative;
+    display: inline-block;
+    margin: 0 30px;
+    color: #fff;
+    text-decoration: none;
+}
+header ul li a:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+.imgs {
+    padding: 40px 0 0 25px;
+}
+.imgs .logo-html{
+    padding-bottom: 15px;
+}
+.servicos{
+    padding: 20px 0 40px 0;
+    background: #f7f7f7;
+}
+.cabecalho-sessao{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.cabecalho-sessao h2{
+    font-weight: 300;
+    font-size: 40px;
+}
+.conteudo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.box-servicos p {
+    font-size: 18px;
+    font-weight: 400;
+}
+.servicos .conteudo .box-servicos
+{   
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 40px 20px;
+    background-image: linear-gradient(to right, #5b3374, #ad8cc0);
+    color: #fff;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+}
+.servicos .conteudo .box-servicos:hover{
+    background-image: linear-gradient(to right, #4d2666, #3b343f);
+    color: #fff;
+}
+.servicos .conteudo .box-servicos img{
+    padding: 20px;
+    filter: invert(1);
+}
+.contato{
+    background: #333333;
+    padding: 30px 0 50px 0;
+}
+
+.contato .conteudo {
+    display: flex;
+    margin-left: 100px;
+}
+.contato .cabecalho-sessao h2{
+    font-weight: 300;
+    font-size: 40px;
+    color: #fff;
+}
+.contato .box-contatos img{
+    width: 40px;
+    padding-right: 10px;
+}
+.conteudo .box-contatos ul li {
+    display: flex;
+    
+}
+.conteudo .box-contatos li{
+    padding-bottom: 10px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 24px;
+}
+.footer {
+    background: #111111;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+/*Responsivo*/
+@media (max-width: 991px){
+    
+    header,
+    header.rolou{
+        padding: 20px 100px;
+        z-index: 1;
+    }
+    .menu-mobile{
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.5s;
+        border-top: 1px solid rgba(0,0,0,0.2);
+        z-index: 2;
+    }
+    header ul li a{
+        color: #111;
+        font-size: 24px;
+        padding: 10px;
+    }
+    header ul li a:hover {
+        text-decoration: underline;
+    }
+    .menu-mobile.active{
+        left: 0;
+    }
+    .toggle
+    {
+        width: 40px;
+        height: 40px;
+        background: url('/image/menu.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+    .toggle.active{
+        width: 40px;
+        height: 40px;
+        background: url('/image/close.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+    }
+    header.rolou .toggle{
+        filter: invert(1);
+    }
+
+}
+@media (max-width: 1115px){
+    .banner-inicio{
+        padding: 50px;
+    }
+    .textoCx.right {
+        float: left;
+        width: 50%;      
+    }
+    .textoCx.right .box-sobre{
+        width: 400px;
+        height: 170px;
+        padding: 35px;
+    }
+    .banner-inicio p{
+        font-size: 20px;
+    }
+    .banner-inicio h2.titulo{
+        margin-bottom: -30px;
+        font-size: 33px;
+        color: #ffffff;
+        font-weight: 300;
+    }
+    .banner-inicio span{
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 22px;
+    }
+    .textoCx.right .box-sobre .tx-sobre p{
+        font-size: 18px;
+    }
+    .imgs {
+        padding: 10px 0 0 45px;
+    }
+    .imgs .logo-js{
+        width: 70px;
+    }
+    .imgs .logo-html{
+        width: 70px;
+    }
+    .imgs .logo-css{
+        width: 70px;
+    }
+}  
+@media (max-width: 850px){
+    .textoCx.right .box-sobre{
+        display: none;
+    }
+    .conteudo .box-contatos li{
+        font-size: 18px;
+    }
+    .contato .conteudo {
+        display: flex;
+        margin-left: 20px;
+    }
+    .banner-inicio {
+        display: flex;
+        justify-items: center;
+        width: 100%;
+        padding-left: 150px;
+    }
+}
